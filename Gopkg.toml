@@ -22,9 +22,29 @@
 
 
 [[constraint]]
+  name = "github.com/Sirupsen/logrus"
+  version = "1.0.3"
+
+[[constraint]]
+  name = "github.com/jinzhu/gorm"
+  version = "1.0.0"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/koding/multiconfig"
+
+[[constraint]]
   name = "github.com/labstack/echo"
   version = "3.2.3"
 
 [[constraint]]
   branch = "v2"
   name = "gopkg.in/mgo.v2"
+
+[[constraint]]
+  name = "github.com/joho/godotenv"
+  version = "1.2.0"
+
+[[constraint]]
+  name = "github.com/go-sql-driver/mysql"
+  version = "1.3.0"

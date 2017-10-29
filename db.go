@@ -6,6 +6,7 @@ import (
 	"github.com/Sirupsen/logrus"
 	"github.com/jinzhu/gorm"
 	"gopkg.in/mgo.v2"
+    _"github.com/go-sql-driver/mysql"
 )
 
 var session *mgo.Session
@@ -33,7 +34,6 @@ func initDB() {
 			logrus.Info("DB connect successful!")
 			break
 		}
-
 	}
-
 }
+

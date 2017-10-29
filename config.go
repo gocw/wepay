@@ -3,12 +3,14 @@ package main
 import (
 	"github.com/Sirupsen/logrus"
 	"github.com/koding/multiconfig"
+	"github.com/joho/godotenv"
 )
 
 // Config 配置结构体
 type Config struct {
 	DB    string `default:"mysql"`
 	DBURL string `default:"localhost"`
+	Debug bool `default:"true"`
 }
 
 var config Config
@@ -29,6 +31,7 @@ func initConfig() {
 	)
 	//载入全局变量config
 	m.Load(&config)
+	logrus.Info(config)
 	//设置日志等级
 	if config.Debug {
 		logrus.SetFormatter(&logrus.TextFormatter{
